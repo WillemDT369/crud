@@ -17,7 +17,6 @@ class CardRepository
     {
 
     }
-
     // Get one
     public function find()
     {
@@ -28,13 +27,21 @@ class CardRepository
     public function get()
     {
         // TODO: replace dummy data by real one
-        return [
-            ['name' => 'dummy one'],
-            ['name' => 'dummy two'],
-        ];
+        // return [
+        //     ['name' => 'dummy one'],
+        //     ['name' => 'dummy two'],
+        // ];
 
         // We get the database connection first, so we can apply our queries with it
         // return $this->databaseManager->database-> (runYourQueryHere)
+        $result = $this->databaseManager->database->query("SELECT * FROM snakes ORDER BY name");
+        if (!$result) {
+            var_dump($this->databaseManager->database->error);
+        }
+        // echo '<pre>';
+        // var_dump($result->fetch_all(MYSQLI_ASSOC));
+        // echo '</pre>';
+        return $result;
     }
 
     public function update()
