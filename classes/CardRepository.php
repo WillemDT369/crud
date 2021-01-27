@@ -6,6 +6,7 @@
 class CardRepository
 {
     private $databaseManager;
+    public $newSnake;
 
     // This class needs a database connection to function
     public function __construct(DatabaseManager $databaseManager)
@@ -57,14 +58,15 @@ class CardRepository
         return $result;
     }
 
-    public function update()
+    public function update(int $id ,string $updateGame)
     {
-
+        $this->databaseManager->database->query("UPDATE snakes SET name = '$updateGame' WHERE id = $id;");
+      
     }
 
-    public function delete()
+    public function delete(int $id)
     {
-
+       
     }
 
 }

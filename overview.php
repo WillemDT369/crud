@@ -18,7 +18,10 @@
 
 <ul>
 <?php foreach ($cards as $card) : ?>
-    <li><?= $card['name'] ?></li>
+    <li>
+		<?=$card['name']?><a style="text-decoration:none" href="edit.php?id=<?=$card['id']?>&name=<?=$card['name']?>"> edit</a>
+						  
+	</li>
 <?php endforeach; ?>
 </ul>
 
