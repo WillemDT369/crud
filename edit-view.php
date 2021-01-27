@@ -10,6 +10,7 @@
         <label for="edit">Edit species: </label>
         <input type="text" id="edit" name="edit">
         <input type="submit" value="edit" name="update">
+        <input type="submit" value="delete" name="delete">
     </form>
 </body>
 </html>

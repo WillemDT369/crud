@@ -6,6 +6,15 @@ if (!empty($_POST['update'])) {
     $updateGame = $_POST['edit'];
     
     $cardRepository->update($id, $updateGame);
+    header('location: index.php');
 }
+
+if (!empty($_POST['delete'])) {
+
+    $id = $_GET['id'];
+    $cardRepository->delete($id);
+    header('location: index.php');
+}
+    
 
  require 'edit-view.php';

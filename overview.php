@@ -20,7 +20,7 @@
 <?php foreach ($cards as $card) : ?>
     <li>
 		<?=$card['name']?><a style="text-decoration:none" href="edit.php?id=<?=$card['id']?>&name=<?=$card['name']?>"> edit</a>
-						  
+						  <a style="text-decoration:none" href="edit.php?id=<?=$card['id']?>&name=<?=$card['name']?>"> delete</a>
 	</li>
 <?php endforeach; ?>
 </ul>

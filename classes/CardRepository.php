@@ -66,7 +66,8 @@ class CardRepository
 
     public function delete(int $id)
     {
-       
+        $this->databaseManager->database->query("DELETE FROM snakes WHERE id = $id;");
+      
     }
 
 }
