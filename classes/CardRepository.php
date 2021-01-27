@@ -15,6 +15,19 @@ class CardRepository
 
     public function create()
     {
+        if (!empty($_POST['snake'])) {
+            $this->newSnake = $_POST['snake'];
+
+            $create = $this->databaseManager->database->query("INSERT INTO snakes (name) VALUES ('$this->newSnake')");
+
+            if (!$create) {
+                var_dump($this->databaseManager->database->error);
+            }
+
+            return $create;
+        }
+        
+        $this->get();
 
     }
     // Get one

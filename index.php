@@ -19,6 +19,7 @@ $databaseManager->connect();
 // This example is about a Pokémon card collection
 // Update the naming if you'd like to work with another collection
 $cardRepository = new CardRepository($databaseManager);
+$cards = $cardRepository->create();
 $cards = $cardRepository->get();
 
 // Load your view

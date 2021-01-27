@@ -10,7 +10,7 @@
 <body>
 
 <h1>What kind of snakes do you like?</h1>
-<form action="classes/CardRepository.php" method="post">
+<form method="post">
 	<label for="snake">Add new species: </label>
 	<input type="text" id="snake" name="snake">
 	<input type="submit" value="submit" name="submit">
